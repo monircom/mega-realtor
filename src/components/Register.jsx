@@ -2,12 +2,11 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
-import { FaEyeSlash } from "react-icons/fa6";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaEyeSlash  } from "react-icons/fa";
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const {createUser, updateUser} = useContext(AuthContext)
 
     const [showPassword, setShowPassword] = useState(false)
 
@@ -20,6 +19,27 @@ const Register = () => {
     } = useForm()
   
     const onSubmit = (data) => {
+
+      const {email, password, fullName, photoUrl} = data;
+        console.log(email,password, fullName, photoUrl);
+        createUser(email,password)
+        .then(result => {
+            console.log(result.user)
+            updateUser(fullName , photoUrl)
+            .then(() => {
+              console.log("Profile updated!")
+              // Profile updated!
+              // ...
+            }).catch((error) => {
+              console.error(error)
+              // An error occurred
+              // ...
+            });
+        })
+        .catch(error=>{
+            console.error(error)
+        })
+
       console.log(data)
     }
 
