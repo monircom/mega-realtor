@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash  } from "react-icons/fa";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Register = () => {
 
     const {createUser, updateUser} = useContext(AuthContext)
 
     const [showPassword, setShowPassword] = useState(false)
+    const [passwordError, setPasswordError ] = useState("");
+    const [firebaseError, setFirebaseError ] = useState("");
 
-    //console.log(createuser);
     const {
       register,
       handleSubmit,
@@ -22,9 +24,42 @@ const Register = () => {
 
       const {email, password, fullName, photoUrl} = data;
         console.log(email,password, fullName, photoUrl);
+        setPasswordError("");
+        setFirebaseError("")
+
+        if(password.length<6){
+           console.log(password);
+           toast.error('Password must be at least 6 characters', {
+            duration: 2000,
+            position: 'top-center',
+          });
+           setPasswordError("Password must be at least 6 characters")
+           return;
+        }
+        else if(!/[A-Z]/.test(password)){
+          toast.error('Password must have an Uppercase letter', {
+            duration: 2000,
+            position: 'top-center',
+          });
+          setPasswordError("Password must have an Uppercase letter")
+          return;          
+        }
+        else if(!/[a-z]/.test(password)){
+          toast.error('Password must have a Lowercase letter', {
+            duration: 2000,
+            position: 'top-center',
+          });
+          setPasswordError("Password must have a Lowercase letter")
+          return;          
+        }       
+
         createUser(email,password)
         .then(result => {
             console.log(result.user)
+            toast.success('User Registered Successfully', {
+              duration: 2000,
+              position: 'top-center',
+            });
             updateUser(fullName , photoUrl)
             .then(() => {
               console.log("Profile updated!")
@@ -38,6 +73,11 @@ const Register = () => {
         })
         .catch(error=>{
             console.error(error)
+            toast.error(error.message.split("/")[1].replace(")",""), {
+              duration: 2000,
+              position: 'top-center',
+            });
+            setFirebaseError(error.message.split("/")[1].replace(")",""))
         })
 
       console.log(data)
@@ -121,8 +161,10 @@ const Register = () => {
                   showPassword ? <FaEyeSlash></FaEyeSlash> :<FaEye></FaEye>
                  }
                   </span>
-                </div>
+                </div>                
                 {errors.password && <span className="text-red-500">This field is required</span>}
+                {passwordError && <span className="text-red-500">{passwordError}</span>}
+                {firebaseError && <span className="text-red-500">{firebaseError}</span>}
                 
               </div>
               <div className="form-control mt-6">
@@ -134,7 +176,9 @@ const Register = () => {
             </Link></p>
           </div>
         </div>
+        <Toaster />
       </div>
+      
     );
 };
 
