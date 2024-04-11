@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
+
 const Navbar = () => {
 
    const { user , logOut } = useContext(AuthContext);
@@ -17,8 +18,9 @@ const Navbar = () => {
     const navLinks = <>
 
         <li><NavLink to="/"> Home</NavLink></li>
-        <li><NavLink to="/login"> Login</NavLink></li>
-        <li><NavLink to="/register"> Register</NavLink></li>
+        {/* <li><NavLink to="/login"> Login</NavLink></li>
+        <li><NavLink to="/register"> Register</NavLink></li> */}
+        <li><NavLink to="/update"> Update Profile</NavLink></li>        
         <li><NavLink to="/profile"> Profile</NavLink></li>
     </>
   return (
@@ -51,27 +53,27 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl font-bold">MEGA REALTOR</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
         {navLinks}
         </ul>
       </div>
       
-      <div className="navbar-end">
-      
+    <div className="navbar-end gap-2">      
     {
       user ? <>
-            <div className="dropdown dropdown-hover">
+    <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img alt="User" src= {user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
         </div>
       </div>
-      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+      {/* menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 */}
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52 ">
         <li>
-        <span>{user?.displayName}</span>
+        <span>{user?.displayName || "User Name Not Found"}</span>
         </li>
         <li>{
-          <span>{user?.email}</span>
+          <span>{user?.email || "Email  Not Found"}</span>
         }</li>
         
       </ul>

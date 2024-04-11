@@ -4,7 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
 
-    const {signInUser,googleLogin} = useContext(AuthContext)
+    const {signInUser, googleLogin, githubLogin} = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleLogin = e =>{
@@ -32,7 +32,17 @@ const Login = () => {
         })
         .catch(error=>{
             console.error(error)
+        })
+    }
 
+    const handleGithubLogin = () =>{
+      githubLogin()
+      .then(result => {
+        console.log(result.user)        
+        navigate("/");
+        })
+        .catch(error=>{
+            console.error(error)
         })
     }
 
@@ -82,7 +92,10 @@ const Login = () => {
             <p className="pl-8"  >New to the Mega Realtor? Please<Link to="/register">
             <button className="btn btn-link">Register</button>
             </Link></p>
-            <p><button onClick={handleGoogleLogin} className="btn btn-ghost">Google</button></p>
+            <div className="flex">
+            <button onClick={handleGoogleLogin} className="btn btn-ghost">Google</button>
+            <button onClick={handleGithubLogin} className="btn btn-ghost">Github</button>
+            </div>
           </div>
         </div>
       </div>
