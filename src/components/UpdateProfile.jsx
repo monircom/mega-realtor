@@ -57,10 +57,9 @@ const UpdateProfile = () => {
                   readOnly
                   placeholder="email"                 
                   className="input input-bordered"
-                  {...register("email",{ required: true})}
-                />
+                  {...register("email")}
+                />                
                 
-                {errors.email && <span className="text-red-500">This field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
