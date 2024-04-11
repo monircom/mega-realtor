@@ -60,7 +60,7 @@ const Register = () => {
               duration: 2000,
               position: 'top-center',
             });
-            updateUser(user, fullName , photoUrl)
+            updateUser( fullName , photoUrl)
             .then(() => {
               console.log("Profile updated!")
               setTimeout(function(){

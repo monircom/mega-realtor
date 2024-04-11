@@ -37,7 +37,7 @@ const UpdateProfile = () => {
       const onSubmit = (data) => {
         console.log(data)
         const {fullName, photoUrl} = data;
-        updateUser(user,fullName , photoUrl)
+        updateUser(fullName , photoUrl)
         .then(() => {          
             toast.success('User Profile updated Successfully', {
                 duration: 2000,
