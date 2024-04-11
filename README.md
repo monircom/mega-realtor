@@ -1,15 +1,22 @@
 # MEGA REALTOR
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
+MEGA REALTOR Is a website Where user can see list Residential real estate listing. User can Registration with Email, Google, Github. 
 
 
+#  Features
 
+- User can Registration with Email, Google, Github 
+- Use can Update Profile
+- Private Routeing
+- Listing of different Residential Spaces.
+- Dynamic Title based on user location on web
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Npm packages used  
+
+* React-leaflet
+* React Hook form
+* Swiper slider
 
 
 Code link:
