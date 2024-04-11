@@ -1,13 +1,13 @@
 # MEGA REALTOR
 
 
-MEGA REALTOR Is a website Where user can see list Residential real estate listing. User can Registration with Email, Google, Github. 
-
+MEGA REALTOR is a website Where user can see list Residential real estate listing. User can Registration with Email, Google, Github. 
+User can Update their Profile.
 
 #  Features
 
 - User can Registration with Email, Google, Github 
-- Use can Update Profile
+- User can Update their Profile
 - Private Routeing
 - Listing of different Residential Spaces.
 - Dynamic Title based on user location on web

@@ -32,9 +32,9 @@ const About = () => {
       <div>
         <MapContainer
           center={position}
-          zoom={13}
-          scrollWheelZoom={true}
-          style={{ minHeight: "50vh", minWidth: "80vw" }}
+          zoom={12}
+          scrollWheelZoom={false}
+          style={{ minHeight: "50vh", minWidth: "65vw" }}
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

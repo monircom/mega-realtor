@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash  } from "react-icons/fa";
@@ -12,7 +12,7 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false)
     const [passwordError, setPasswordError ] = useState("");
     const [firebaseError, setFirebaseError ] = useState("");
-
+    const navigate = useNavigate();
     const {
       register,
       handleSubmit,
@@ -60,11 +60,12 @@ const Register = () => {
               duration: 2000,
               position: 'top-center',
             });
-            updateUser(fullName , photoUrl)
+            updateUser(user, fullName , photoUrl)
             .then(() => {
               console.log("Profile updated!")
-              // Profile updated!
-              // ...
+              setTimeout(function(){
+                navigate("/");
+            }, 1000);
             }).catch((error) => {
               console.error(error)
               // An error occurred

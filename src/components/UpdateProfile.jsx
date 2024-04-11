@@ -1,12 +1,25 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from 'react-hot-toast';
 import { AuthContext } from "../Providers/AuthProvider";
+import { useNavigate } from 'react-router-dom';
 
 const UpdateProfile = () => {
 
-    const { user  } = useContext(AuthContext);
+    const { user, updateUser } = useContext(AuthContext);
     const [firebaseError, setFirebaseError ] = useState("");
+    const navigate = useNavigate();
+    console.log("inside Update",user)
+    //const [saveUser, setSaveuser] = useState(null);
+
+    //const [fullName, setFullName] = useState(user?.displayName);
+
+    // useEffect(() =>{       
+    //     setFullName(user?.displayName);
+    //             //setLoading(false);
+    //            // console.log("Observing",currentUser)
+
+    //     },[user]);    
 
     const {
         register,
@@ -23,6 +36,25 @@ const UpdateProfile = () => {
 
       const onSubmit = (data) => {
         console.log(data)
+        const {fullName, photoUrl} = data;
+        updateUser(user,fullName , photoUrl)
+        .then(() => {          
+            toast.success('User Profile updated Successfully', {
+                duration: 2000,
+                position: 'top-center',
+              });
+            console.log("Profile updated!")            
+            navigate("/");     
+  
+        }).catch((error) => {
+          console.error(error)
+          toast.error(error.message.split("/")[1].replace(")",""), {
+            duration: 2000,
+            position: 'top-center',
+          });
+          setFirebaseError(error.message.split("/")[1].replace(")",""))
+          
+        });
       }
 
     return (
