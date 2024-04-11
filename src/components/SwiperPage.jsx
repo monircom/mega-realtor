@@ -18,8 +18,9 @@ const SwiperPage = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -30,33 +31,33 @@ const SwiperPage = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="slide slide1">
-            <h1 className="text-3xl">Slide 1</h1>
+          <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/1.jpg)] ">        
+            <h1 className="text-5xl ">Beautiful single-family home with modern amenities.</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide slide2">
-            <h1 className="text-3xl">Slide 2</h1>
+        <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/2.jpg)] ">        
+            <h1 className="text-5xl ">Beautiful single-family home with modern amenities.</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide slide3">
-            <h1 className="text-3xl">Slide 3</h1>
+        <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/3.jpg)] ">        
+            <h1 className="text-5xl ">Beautiful single-family home with modern amenities.</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide slide4">
-            <h1 className="text-3xl">Slide 4</h1>
+        <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/4.jpg)] ">        
+            <h1 className="text-5xl ">Beautiful single-family home with modern amenities.</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide slide5">
-            <h1 className="text-3xl">Slide 5</h1>
+        <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/5.jpg)] ">        
+            <h1 className="text-5xl ">Beautiful single-family home with modern amenities.</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide slide6">
-            <h1 className="text-3xl">Slide 6</h1>
+        <div className="slide bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(./assets/6.jpg)] ">        
+            <h1 className="text-5xl ">Beautiful single-family home with modern amenities.</h1>
           </div>
         </SwiperSlide>
       </Swiper>

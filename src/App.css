@@ -1,6 +1,6 @@
 
 .slide{
- color: rgb(44, 44, 229);
+ color: rgb(212, 205, 241);
  height: 70vh;
  display: flex;
  justify-content: center;
@@ -9,10 +9,11 @@
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+ border-radius: 16px;
 }
 
-.slide1{
-    background-image: url("./assets/1.jpg");
+/* .slide1{
+    
 }
 
 .slide2{
@@ -33,4 +34,4 @@
 
 .slide6{
     background-image: url("./assets/6.jpg");
-}
+} */
