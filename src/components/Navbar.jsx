@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import avater from "../assets/avatar.png";
 
 const Navbar = () => {
 
@@ -58,7 +59,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -75,11 +76,13 @@ const Navbar = () => {
     {
       user ? <>
     <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ">
+    <Link to="/profile">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="User" src= {user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
-        </div>
+          <img alt="User" src= {user?.photoURL || avater} />
+        </div>       
       </div>
+      </Link>
       {/* menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 */}
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-300 rounded-box w-52 ">
         <li>

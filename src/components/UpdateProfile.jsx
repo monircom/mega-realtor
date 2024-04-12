@@ -39,7 +39,7 @@ const UpdateProfile = () => {
         const {fullName, photoUrl} = data;
         updateUser(fullName , photoUrl)
         .then(() => {          
-            toast.success('User Profile updated Successfully', {
+            toast.success('Profile updated Successfully', {
                 duration: 2000,
                 position: 'top-center',
               });
@@ -58,7 +58,7 @@ const UpdateProfile = () => {
       }
 
     return (
-        <div className=" min-h-[75vh] bg-base-200">
+        <div className="min-h-[75vh] bg-base-200">
         <div className="flex justify-center items-center flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold my-10">Update Profile</h1>

@@ -15,8 +15,7 @@ const Register = () => {
     const navigate = useNavigate();
     const {
       register,
-      handleSubmit,
-      watch,
+      handleSubmit,      
       formState: { errors },
     } = useForm()
   
@@ -100,7 +99,7 @@ const Register = () => {
         })
     }
     return (
-        <div className=" min-h-[75vh] bg-base-200">
+        <div className="min-h-[75vh] bg-base-200">
         <div className="flex justify-center items-center flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold my-10">Register now!</h1>
@@ -172,7 +171,7 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
-            <p className="pl-8"  >Already have account? Please<Link to="/login">
+            <p className="pl-8"  >Already have an account? Please<Link to="/login">
             <button className="btn btn-link">Login</button>
             </Link></p>
           </div>
