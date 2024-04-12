@@ -22,7 +22,7 @@ const Root = () => {
 
         if (loc.state)
         {
-            document.title = `${loc.state}`;
+            document.title = `${loc.state.replace("/", "").toUpperCase()}`;
         }
 
 
