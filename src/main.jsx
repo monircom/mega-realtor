@@ -12,15 +12,23 @@ import Profile from "./components/Profile";
 import PrivateRoute from "./routes/PrivateRoute";
 import UpdateProfile from "./components/UpdateProfile";
 import About from "./components/About";
+import ErrorPage from "./components/ErrorPage";
+import ResidentialDetails from "./components/ResidentialDetails";
+import Listings from "./components/Listings";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/listings",
+        element: <Listings></Listings>,
       },
       {
         path: "/login",
@@ -41,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <PrivateRoute><About></About></PrivateRoute>,
+      },
+      {
+        path: "/residential/:id",
+        element: <ResidentialDetails></ResidentialDetails>,
+        loader: () => fetch("/residential.json"),
       },
     ],
   },

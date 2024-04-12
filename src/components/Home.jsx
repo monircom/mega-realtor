@@ -1,15 +1,17 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../firebase/firebase.config"
 import SwiperPage from "./SwiperPage";
+import Residentials from "./Residentials";
 
 
 const Home = () => {    
     
     return (
-        <div>
-            <h2 className="text-3xl">This is Home</h2>
+        <div>           
 
         <SwiperPage></SwiperPage>
+
+        <Residentials></Residentials>
             
         </div>
     );

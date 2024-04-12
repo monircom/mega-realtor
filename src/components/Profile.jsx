@@ -7,7 +7,9 @@ const Profile = () => {
 
     const { user , logOut } = useContext(AuthContext);
   return (
+
     <div className="min-h-[75vh] bg-base-200 flex justify-center items-center flex-col">
+        
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img

@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Single-family homes",
+        "image": "/images/single-family-home.jpg",
+        "segment_name": "Residential",
+        "description": "Beautiful single-family home with modern amenities.",
+        "price": "$500,000",
+        "status": "Sale",
+        "area": "2500 sq ft",
+        "location": "City XYZ",
+        "facilities": ["living room", "swimming pool", "kitchen"]
+    },
+    {
+        "id": 2,
+        "estate_title": "Townhouses",
+        "image": "/images/Townhouses.png",
+        "segment_name": "Residential",
+        "description": "Cozy townhouse in a family-friendly neighborhood.",
+        "price": "$350,000",
+        "status": "Sale",
+        "area": "1800 sq ft",
+        "location": "Suburb ABC",
+        "facilities": ["living room", "backyard", "garage"]
+    },
+    {
+        "id": 3,
+        "estate_title": "Apartments",
+        "image": "/images/apartment.jpg",
+        "segment_name": "Residential",
+        "description": "Modern apartment with stunning city views.",
+        "price": "$2000/month",
+        "status": "Rent",
+        "area": "1000 sq ft",
+        "location": "Downtown XYZ",
+        "facilities": ["living room", "gym", "security"]
+    },
+    {
+        "id": 4,
+        "estate_title": "Student housing",
+        "image": "/images/student-housing.jpg",
+        "segment_name": "Residential",
+        "description": "Comfortable student housing near campus.",
+        "price": "$800/month",
+        "status": "Rent",
+        "area": "600 sq ft",
+        "location": "University District",
+        "facilities": ["bedroom", "study area", "laundry room"]
+    },
+    {
+        "id": 5,
+        "estate_title": "Senior living communities",
+        "image": "/images/7.jpg",
+        "segment_name": "Residential",
+        "description": "Retirement community with various amenities.",
+        "price": "$3000/month",
+        "status": "Rent",
+        "area": "1200 sq ft",
+        "location": "Elderly Estates",
+        "facilities": ["bedroom", "dining area", "medical services"]
+    },
+    {
+        "id": 6,
+        "estate_title": "Vacation rentals",
+        "image": "/images/8.jpg",
+        "segment_name": "Vacation",
+        "description": "Charming vacation rental by the beach.",
+        "price": "$200/night",
+        "status": "Rent",
+        "area": "1500 sq ft",
+        "location": "Coastal Paradise",
+        "facilities": ["bedroom", "beach access", "BBQ area"]
+    },
+    {
+        "id": 7,
+        "estate_title": "Single-family homes",
+        "image": "/images/townhouses2.jpg",
+        "segment_name": "Residential",
+        "description": "Classic single-family home with a spacious backyard.",
+        "price": "$600,000",
+        "status": "Sale",
+        "area": "2800 sq ft",
+        "location": "Suburb DEF",
+        "facilities": ["living room", "backyard", "garage"]
+    },
+    {
+        "id": 8,
+        "estate_title": "Apartments",
+        "image": "/images/apartment2.jpg",
+        "segment_name": "Residential",
+        "description": "Luxurious apartment in a high-rise building.",
+        "price": "$3000/month",
+        "status": "Rent",
+        "area": "1800 sq ft",
+        "location": "City ABC",
+        "facilities": ["living room", "balcony", "fitness center"]
+    },
+    {
+        "id": 9,
+        "estate_title": "Townhouses",
+        "image": "/images/9.jpg",
+        "segment_name": "Residential",
+        "description": "Modern townhouse with sleek design.",
+        "price": "$400,000",
+        "status": "Sale",
+        "area": "2000 sq ft",
+        "location": "Urban Center",
+        "facilities": ["living room", "rooftop terrace", "garage"]
+    }
+
+
+]
+
+
