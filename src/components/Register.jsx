@@ -22,12 +22,12 @@ const Register = () => {
     const onSubmit = (data) => {
 
       const {email, password, fullName, photoUrl} = data;
-        console.log(email,password, fullName, photoUrl);
+       // console.log(email,password, fullName, photoUrl);
         setPasswordError("");
         setFirebaseError("")
 
         if(password.length<6){
-           console.log(password);
+           //console.log(password);
            toast.error('Password must be at least 6 characters', {
             duration: 2000,
             position: 'top-center',
@@ -54,14 +54,14 @@ const Register = () => {
 
         createUser(email,password)
         .then(result => {
-            console.log(result.user)
+            //console.log(result.user)
             toast.success('User Registered Successfully', {
               duration: 2000,
               position: 'top-center',
             });
             updateUser( fullName , photoUrl)
             .then(() => {
-              console.log("Profile updated!")
+              //console.log("Profile updated!")
               setTimeout(function(){
                 navigate("/");
             }, 1000);
@@ -80,24 +80,9 @@ const Register = () => {
             setFirebaseError(error.message.split("/")[1].replace(")",""))
         })
 
-      console.log(data)
+      //console.log(data)
     }
 
-
-
-    const handleRegister = e =>{
-        e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        console.log(email,password)
-        createUser(email,password)
-        .then(result => {
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.error(error)
-        })
-    }
     return (
         <div className="min-h-[75vh] bg-base-200">
         <div className="flex justify-center items-center flex-col">

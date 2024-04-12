@@ -11,33 +11,32 @@ const Login = () => {
   const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
+  //console.log(location);
 
   const [showPassword, setShowPassword] = useState(false)
   const [firebaseError, setFirebaseError ] = useState("");
   const {
     register,
-    handleSubmit,
-    watch,
+    handleSubmit,    
     formState: { errors },
   } = useForm()
 
   const onSubmit = (data) => {
     const {email, password} = data;
-        console.log(email,password);
+        //console.log(email,password);
         signInUser(email, password)
         .then((result) => {
           toast.success("Logged in Successfully", {
             duration: 2000,
             position: "top-center",
           });
-          console.log(result.user);          
+          //console.log(result.user);          
           setTimeout(function () {
             navigate(location?.state ? location.state : "/");
           }, 2500);
         })
         .catch((error) => {
-          console.error(error)
+          //console.error(error)
             toast.error(error.message.split("/")[1].replace(")",""), {
               duration: 2000,
               position: 'top-center',
@@ -50,7 +49,7 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
-        console.log(result.user); 
+       //console.log(result.user); 
         toast.success("Logged in Successfully", {
           duration: 2000,
           position: "top-center",
@@ -67,7 +66,7 @@ const Login = () => {
   const handleGithubLogin = () => {
     githubLogin()
       .then((result) => {
-        console.log(result.user);
+        //console.log(result.user);
         toast.success("Logged in Successfully", {
           duration: 2000,
           position: "top-center",

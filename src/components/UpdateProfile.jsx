@@ -8,23 +8,10 @@ const UpdateProfile = () => {
 
     const { user, setUser, updateUser } = useContext(AuthContext);
     const [firebaseError, setFirebaseError ] = useState("");
-    const navigate = useNavigate();
-    console.log("inside Update",user)
-    //const [saveUser, setSaveuser] = useState(null);
-
-    //const [fullName, setFullName] = useState(user?.displayName);
-
-    // useEffect(() =>{       
-    //     setFullName(user?.displayName);
-    //             //setLoading(false);
-    //            // console.log("Observing",currentUser)
-
-    //     },[user]);    
-
+    const navigate = useNavigate();       
     const {
         register,
-        handleSubmit,
-        watch,
+        handleSubmit,       
         formState: { errors },
       } = useForm({ 
         defaultValues: { 
@@ -34,8 +21,7 @@ const UpdateProfile = () => {
         } 
     });
 
-      const onSubmit = (data) => {
-        //console.log(data)
+      const onSubmit = (data) => {       
         const {fullName, photoUrl} = data;
         updateUser(fullName , photoUrl)
         .then(() => {          
@@ -44,7 +30,7 @@ const UpdateProfile = () => {
                 position: 'top-center',
               });
               setUser(user);
-            console.log("Profile updated!")            
+            //console.log("Profile updated!")            
             navigate("/");     
   
         }).catch((error) => {
@@ -79,21 +65,7 @@ const UpdateProfile = () => {
                   {...register("fullName",{ required: true})}                  
                 />
                 {errors.fullName && <span className="text-red-500"> This field is required</span>}
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>                
-                <input
-                  type="email"
-                  readOnly
-                  placeholder="email"                 
-                  className="input input-bordered"
-                  {...register("email")}
-                />                
-                
-              </div>
+              </div>            
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo URL</span>
@@ -105,8 +77,22 @@ const UpdateProfile = () => {
                   {...register("photoUrl")}                 
                 />                
               </div>
-              
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>                
+                <input
+                  type="email"
+                  readOnly
+                  placeholder="email"                 
+                  className="input input-bordered"
+                  {...register("email")}
+                />               
+              </div>
+
               {firebaseError && <span className="text-red-500">{firebaseError}</span>}
+
+              
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Update</button>
               </div>
