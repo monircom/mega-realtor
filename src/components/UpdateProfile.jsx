@@ -74,8 +74,9 @@ const UpdateProfile = () => {
                   type="text"
                   placeholder="Photo URL"                  
                   className="input input-bordered"                  
-                  {...register("photoUrl")}                 
-                />                
+                  {...register("photoUrl",{ required: true})}                 
+                /> 
+                {errors.photoUrl && <span className="text-red-500"> This field is required</span>}               
               </div>
               <div className="form-control">
                 <label className="label">
