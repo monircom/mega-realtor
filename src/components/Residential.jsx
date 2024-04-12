@@ -26,6 +26,9 @@ const Residential = ({ residential }) => {
           <h2 className="card-title font-playfair-display text-2xl">{residential.estate_title}</h2>
           <p className="">Type: {residential.segment_name}</p> 
           <p className="">Status: <span className="font-bold">{residential.status}</span></p>  
+          <p className="">Price: <span className="font-bold">{residential.price}</span></p>  
+          <p className="">Area: <span className="font-bold">{residential.area}</span></p>  
+          <p className="">Location: <span className="font-bold">{residential.location}</span></p>  
           <hr className="my-6 border-t-2 border-dashed"></hr>     
           <div className="">
             <div>

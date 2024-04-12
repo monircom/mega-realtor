@@ -8,7 +8,7 @@
         "price": "$500,000",
         "status": "Sale",
         "area": "2500 sq ft",
-        "location": "City XYZ",
+        "location": "University District",
         "facilities": ["living room", "swimming pool", "kitchen"]
     },
     {
@@ -32,7 +32,7 @@
         "price": "$2000/month",
         "status": "Rent",
         "area": "1000 sq ft",
-        "location": "Downtown XYZ",
+        "location": "Elderly Estates",
         "facilities": ["living room", "gym", "security"]
     },
     {
