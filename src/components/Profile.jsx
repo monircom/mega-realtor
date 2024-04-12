@@ -14,7 +14,7 @@ const Profile = () => {
         <figure className="px-10 pt-10">
           <img
             src={user?.photoURL || avater}
-            alt="Shoes"
+            alt="User"
             className="rounded-xl"
           />
         </figure>
