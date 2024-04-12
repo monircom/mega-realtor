@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const UpdateProfile = () => {
 
-    const { user, setUser, updateUser } = useContext(AuthContext);
+    const { user, updateUser } = useContext(AuthContext);
     const [firebaseError, setFirebaseError ] = useState("");
     const navigate = useNavigate();       
     const {
@@ -29,7 +29,7 @@ const UpdateProfile = () => {
                 duration: 2000,
                 position: 'top-center',
               });
-              setUser(user);
+             // setUser(user);
             //console.log("Profile updated!")            
             navigate("/");     
   
