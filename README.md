@@ -1,12 +1,12 @@
 # MEGA REALTOR
 
 
-MEGA REALTOR is a website Where user can see list Residential real estate listing. User can Registration with Email, Google, Github. 
+MEGA REALTOR is a website Where user can see list Residential real estate listing. User can Register with Email, Google, Github. 
 User can Update their Profile.
 
 #  Features
 
-- User can Registration with Email, Google, Github 
+- User can Register with Email, Google, Github 
 - User can Update their Profile
 - Private Routeing
 - Listing of different Residential Spaces.
@@ -18,6 +18,7 @@ User can Update their Profile.
 * React Hook form
 * Swiper slider
 
+# Code Link & Live site
 
 Code link:
 https://github.com/programming-hero-web-course-4/b9a9-real-estate-monircom

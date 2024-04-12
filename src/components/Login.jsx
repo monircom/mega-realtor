@@ -31,8 +31,7 @@ const Login = () => {
             duration: 2000,
             position: "top-center",
           });
-          console.log(result.user);
-          e.target.reset();  
+          console.log(result.user);          
           setTimeout(function () {
             navigate(location?.state ? location.state : "/");
           }, 2500);
