@@ -40,7 +40,7 @@ const Login = () => {
             toast.error(error.message.split("/")[1].replace(")",""), {
               duration: 2000,
               position: 'top-center',
-            });
+            });            
             setFirebaseError(error.message.split("/")[1].replace(")",""))
         });
     
@@ -59,7 +59,12 @@ const Login = () => {
         }, 2500);
       })
       .catch((error) => {
-        console.error(error);
+        //console.error(error);
+        toast.error(error.message.split("/")[1].replace(")",""), {
+          duration: 2000,
+          position: 'top-center',
+        });            
+        setFirebaseError(error.message.split("/")[1].replace(")",""))
       });
   };
 
@@ -76,7 +81,12 @@ const Login = () => {
         }, 2500);
       })
       .catch((error) => {
-        console.error(error);
+       // console.error(error);
+       toast.error(error.message.split("/")[1].replace(")",""), {
+        duration: 2000,
+        position: 'top-center',
+      });            
+      setFirebaseError(error.message.split("/")[1].replace(")",""))
       });
   };
 
