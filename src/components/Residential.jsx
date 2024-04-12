@@ -6,7 +6,12 @@ const Residential = ({ residential }) => {
   return (
     <div>
         
-      <div className="card w-full  h-full bg-base-100 shadow-xl border-2">
+      <div className="card w-full  h-full bg-base-100 shadow-xl border-2" data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"    
+    data-aos-easing="ease-in-out"    
+    data-aos-once="false"
+    >
         <figure className="rounded-xl bg-gray-300 m-5">
           <img src={residential.image} alt="Shoes" className="w-[100%] h-full rounded-xl" />
         </figure>

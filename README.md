@@ -14,6 +14,7 @@ User can Update their Profile.
 
 # Npm packages used  
 
+* AOS Package
 * React-leaflet
 * React Hook form
 * Swiper slider
