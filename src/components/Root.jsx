@@ -15,6 +15,14 @@ const Root = () => {
         else{
         document.title = `${loc.pathname.replace("/", "").toUpperCase()}`;
         }
+
+        if (loc.state)
+        {
+            document.title = `${loc.state}`;
+        }
+
+
+
         console.log(loc);
     },[loc.pathname]);
     return (

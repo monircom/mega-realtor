@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/residential/:id",
-        element: <ResidentialDetails></ResidentialDetails>,
+        element: <PrivateRoute><ResidentialDetails></ResidentialDetails></PrivateRoute>,
         loader: () => fetch("/residential.json"),
       },
     ],

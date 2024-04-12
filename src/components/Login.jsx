@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm } from "react-hook-form";
@@ -10,6 +10,8 @@ import { FaGithub } from "react-icons/fa";
 const Login = () => {
   const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   const [showPassword, setShowPassword] = useState(false)
   const [firebaseError, setFirebaseError ] = useState("");
@@ -30,10 +32,9 @@ const Login = () => {
             position: "top-center",
           });
           console.log(result.user);
-          e.target.reset();
-  
+          e.target.reset();  
           setTimeout(function () {
-            navigate("/");
+            navigate(location?.state ? location.state : "/");
           }, 2500);
         })
         .catch((error) => {
@@ -56,7 +57,7 @@ const Login = () => {
           position: "top-center",
         });        
         setTimeout(function () {
-          navigate("/");
+          navigate(location?.state ? location.state : "/");
         }, 2500);
       })
       .catch((error) => {
@@ -73,7 +74,7 @@ const Login = () => {
           position: "top-center",
         });        
         setTimeout(function () {
-          navigate("/");
+          navigate(location?.state ? location.state : "/");
         }, 2500);
       })
       .catch((error) => {

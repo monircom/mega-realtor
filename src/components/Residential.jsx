@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Residential = ({ residential }) => {  
     const {facilities} = residential;
@@ -24,7 +24,7 @@ const Residential = ({ residential }) => {
           <hr className="my-6 border-t-2 border-dashed"></hr>     
           <div className="">
             <div>
-            <NavLink to={`/residential/${residential.id}`}>  <button className="btn btn-primary w-full">View Property</button>  </NavLink>         
+            <Link to={`/residential/${residential.id}`} state={residential.estate_title}>  <button className="btn btn-primary w-full">View Property</button>  </Link>         
             </div>           
         </div>
         </div>
