@@ -10,7 +10,7 @@ const Profile = () => {
 
     <div className="min-h-[75vh] bg-base-200 flex justify-center items-center flex-col">
 
-<div className="text-center lg:text-left">
+        <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold mb-10">Profile</h1>            
           </div>
         

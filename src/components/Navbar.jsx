@@ -53,7 +53,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 m-5">
+    <div className="navbar w-max-[80%] bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -104,6 +104,7 @@ const Navbar = () => {
                   </div>
                 </div>
                 </div>
+                </Link>
                 {/* <div
                   tabIndex={0}
                   role="button"
@@ -112,10 +113,10 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img alt="User" src={user?.photoURL || avater} />
                   </div>
-                </div> */}
+                </div>
               </Link>
-              {/* menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 */}
-              {/* <ul
+              
+              <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-300 rounded-box w-52 "
               >
@@ -123,11 +124,12 @@ const Navbar = () => {
                   <span>{user?.displayName || "User Name Not Found"}</span>
                 </li>
                 <li>{<span>{user?.email || "Email  Not Found"}</span>}</li>
-              </ul> */}
-            </div>
-            <a onClick={handleLogOut} className="btn btn-sm">
+              </ul>
+             */}
+            </div> 
+            <button onClick={handleLogOut} className="btn btn-sm">
               Log Out
-            </a>
+            </button>
           </>
         ) : (
           <Link to="/login">
