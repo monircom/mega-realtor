@@ -48,8 +48,7 @@ const UpdateProfile = () => {
         <div className="min-h-[75vh] bg-base-200">
         <div className="flex justify-center items-center flex-col">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold my-10">Update Profile</h1>
-            
+            <h1 className="text-5xl font-bold my-10">Update Profile</h1>            
           </div>
           <div className="shrink-0 w-full max-w-lg shadow-2xl bg-base-100 rounded-lg mb-5 p-4">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">

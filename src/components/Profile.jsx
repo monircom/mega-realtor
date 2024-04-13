@@ -9,6 +9,10 @@ const Profile = () => {
   return (
 
     <div className="min-h-[75vh] bg-base-200 flex justify-center items-center flex-col">
+
+<div className="text-center lg:text-left">
+            <h1 className="text-5xl font-bold mb-10">Profile</h1>            
+          </div>
         
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
